@@ -34,7 +34,9 @@ button.addEventListener('click', () => {
 
 })
 
+
 function tasksLoop() {  
+
     let table = document.createElement('table')
     table.style.border = "1px solid #000"
 
@@ -42,22 +44,22 @@ function tasksLoop() {
     for( i = 0; i < Tasks.length; i+=1) {
         const row = document.createElement('tr')
 
+
         [Tasks[i].title, Tasks[i].description, Tasks[i].dueDate].forEach((prop) => { 
+
             const cell = document.createElement('td')
             cell.textContent = prop 
             row.appendChild(cell)
-           
+         
           }) 
           table.appendChild(row)
-
-
+          box.innerHTML = ""
+          box.appendChild(table)
         } 
+       
 
-        box.innerHTML = ""
-        box.appendChild(table)
     }
-         
-        
+
     
 
 
