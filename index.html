@@ -9,17 +9,28 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="box"></div>
+    <div>
+        <h1>Tasks</h1>
+    </div>
+    <select id="visible"></select>
+    <button id="addProject">Add Project</button>
+    <button id="removeVisible">Remove Visible</button>
+    <div id="box">
+    </div>
 
-    <form action="">
+    <form>
+        <input type="hidden" id="previousProject">
+        <input type="hidden" id="index">
+        <select id="project">
+            </select>
         <input type="text" name="title" id="titleInput" placeholder="Title" value="a">
         <input type="text" name="description" id="descInput" placeholder="Description" value="a">
         <input type="date" name="dueDate" id="dueDate" placeholder="Due Date" value="2022-12-22">
 
-
+        <button id="submitButton">Add</button>
+        
     </form>
-    <button id="submitButton">Add</button>
-
+    
     
 </body>
 </html>
